@@ -1,0 +1,23 @@
+<div class="todo-wrapper" ng-controller="TodoCtrl">
+    <h2>You've got <span class="emphasis">{{getTotalTodos()}}</span> things to do</h2>
+    <ul>
+        <li ng-repeat="todo in todos">
+            <input type="checkbox" ng-model="todo.done"/>
+            <span class="done-{{todo.done}}">{{todo.text}}</span>
+        </li>
+    </ul>
+    <form>
+        <input class="add-input" placeholder="I need to..." type="text" ng-model="formTodoText" ng-model-instant />
+        <button class="add-btn" ng-click="addTodo()"><h2>Add</h2></button>
+    </form>
+
+    <button class="clear-btn" ng-click="clearCompleted()">Clear completed</button>
+</div>
+<!--<div id="slides">-->
+	<!--<img onclick="closeMenu()" src="http://placehold.it/940x530">-->
+	<!--<img onclick="closeMenu()" src="http://placehold.it/940x530">-->
+	<!--<img onclick="closeMenu()" src="http://placehold.it/940x530">-->
+	<!--<img onclick="closeMenu()" src="http://placehold.it/940x530">-->
+<!--</div>-->
+
+<div class="box"><p class="titleBox"><i class="fa fa-home"></i>Welcome</p><hr>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</div>
